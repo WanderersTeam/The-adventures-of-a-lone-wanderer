@@ -10,5 +10,3 @@ manaPotions = 1
 weapon = weapons.sword
 
 att = strength + random.randrange(weapon[0],weapon[1])
-
-print(att)
