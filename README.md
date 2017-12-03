@@ -1,2 +1,2 @@
 # The-adventures-of-a-lone-wanderer
-Gra w Pythonie
+First Game in Python using Github
