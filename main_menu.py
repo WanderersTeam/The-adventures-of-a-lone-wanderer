@@ -45,13 +45,11 @@ def mainMenu():
         mainMenuText()
         if(choice == 1):
             newGameLoad()
-            print("Started a new game \nYour attributes:")
-            print(attributes)
+            print("Started a new game")
             break
         elif(choice == 2):
             SavedGameLoad()
-            print("Loaded a saved game \nYour attributes:")
-            print(attributes)
+            print("Loaded a saved game")
             break
         elif(choice == 3):
             authors()
