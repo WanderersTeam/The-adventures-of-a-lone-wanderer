@@ -7,6 +7,6 @@ strength = 10
 mana = 10
 hpPotions = 2
 manaPotions = 1
-weapon = weapons.sword
-
-att = strength + random.randrange(weapon[0],weapon[1])
+weapon = weapons.chooseTier0()
+weaponAtt = weapons.tier0[weapon]
+att = strength + random.randrange(weaponAtt[0],weaponAtt[1])

@@ -5,5 +5,5 @@ strength = 10
 mana = 10
 hpPotions = 2
 manaPotions = 1
-weapon = [1, 5]
-attack = 14
+weapon = [1, 2]
+attack = 11
