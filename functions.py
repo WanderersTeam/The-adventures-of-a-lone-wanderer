@@ -17,5 +17,3 @@ def save(attributes):
         file.write("weapon = " + str(attributes["weapon"]) + "\n")
         file.write("attack = " + str(attributes["attack"]) + "\n")
         file.close()
-        
-save(attributes)
