@@ -1,5 +1,6 @@
-import weapons, random
+import weapons
 
+heroName = 'Name'
 hp = 40
 exp = 0
 lvl = 1
@@ -9,4 +10,4 @@ hpPotions = 2
 manaPotions = 1
 weapon = weapons.chooseTier0()
 weaponAtt = weapons.tier0[weapon]
-att = strength + random.randrange(weaponAtt[0],weaponAtt[1])
+

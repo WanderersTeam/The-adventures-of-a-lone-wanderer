@@ -1,9 +1,10 @@
-hp = 40
+heroName = 'Ziutek'
+hp = 10
 exp = 0
 lvl = 1
 strength = 10
 mana = 10
 hpPotions = 2
 manaPotions = 1
-weapon = [1, 2]
-attack = 11
+weapon = 'Wooden Sword'
+weaponAtt = [1, 2]
