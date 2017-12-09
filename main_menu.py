@@ -1,7 +1,9 @@
+import functions
 main_menu = 1
 
 
 def mainMenuText():
+    """Prints options for start of the game"""
     print("""    1. New Game
     2. Load Game
     3. Authors
@@ -14,20 +16,20 @@ def newGameLoad():
     """Import New Game parameters"""
     import new_game
     global attributes
-    attributes = {"hp": new_game.hp, "exp": new_game.exp, "lvl": new_game.lvl,
+    attributes = {"heroName": new_game.heroName, "hp": new_game.hp, "exp": new_game.exp, "lvl": new_game.lvl,
                   "strength": new_game.strength, "mana": new_game.mana,
                   "hpPotions": new_game.hpPotions, "manaPotions": new_game.manaPotions,
-                  "weapon": new_game.weapon, "attack": new_game.att}
+                  "weapon": new_game.weapon, "weaponAtt": new_game.weaponAtt}
     return(attributes)
 
 def SavedGameLoad():
     """Import Saved Game parameters"""
     import saved_game
     global attributes
-    attributes = {"hp": saved_game.hp, "exp": saved_game.exp, "lvl": saved_game.lvl,
+    attributes = {"heroName": saved_game.heroName, "hp": saved_game.hp, "exp": saved_game.exp, "lvl": saved_game.lvl,
                   "strength": saved_game.strength, "mana": saved_game.mana,
                   "hpPotions": saved_game.hpPotions, "manaPotions": saved_game.manaPotions,
-                  "weapon": saved_game.weapon, "attack": saved_game.att}
+                  "weapon": saved_game.weapon, "weaponAtt": saved_game.weaponAtt}
     return(attributes)
 def authors():
     """Show Authors of the game"""
@@ -41,11 +43,13 @@ def exit():
     
 
 def mainMenu():
+    """Main part of Main Menu in game"""
     while(main_menu == 1):
         mainMenuText()
         if(choice == 1):
             newGameLoad()
             print("Started a new game")
+            attributes["heroName"] = functions.create_new_hero()     #changes herName to chosen Name
             break
         elif(choice == 2):
             SavedGameLoad()
