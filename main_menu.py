@@ -9,7 +9,7 @@ def mainMenuText():
     3. Authors
     4. Exit""")
     global choice
-    choice = int(input("What to do? [Choose the number]:"))
+    choice = input("What to do? [Choose the number]:")
     return(choice)
 
 def newGameLoad():
@@ -46,18 +46,20 @@ def mainMenu():
     """Main part of Main Menu in game"""
     while(main_menu == 1):
         mainMenuText()
-        if(choice == 1):
+        if(choice == '1'):
             newGameLoad()
             print("Started a new game")
             attributes["heroName"] = functions.create_new_hero()     #changes herName to chosen Name
             break
-        elif(choice == 2):
+        elif(choice == '2'):
             SavedGameLoad()
             print("Loaded a saved game")
             break
-        elif(choice == 3):
+        elif(choice == '3'):
             authors()
-        elif(choice == 4):
+        elif(choice == '4'):
             exit()
             break
+        else:
+            continue
 
