@@ -1,4 +1,5 @@
-import random
+import random, glob, levels
+
 def save(attributes):
     """Saves attributes to file for later use"""
     with open("saved_game.py", "w") as file:
@@ -31,4 +32,31 @@ def attack(attributes):
     """Generates random attack value for held weapon"""
     global attack
     attack = attributes["strength"] + random.randrange(attributes["weaponAtt"][0],attributes["weaponAtt"][1]+1) #uses lowest and highest weapon dmg as range
+    print("Attack value: " +str(attack))
     return attack
+
+def help():
+    """Prints a list of avaiable commands"""
+    print("""List of commands:
+    menu - moves you to Main Menu screen
+    attack - attack an opponent\n""")
+
+def whatToDo(attributes,gameOn):
+    _whatToDo = input("What will you do?\n")
+    if(_whatToDo=="help"):
+        help()
+    elif(_whatToDo=="save"):
+        save(attributes)
+    elif(_whatToDo=="attack"):
+        attack(attributes)
+    elif(_whatToDo=="exit"):
+        gameOn=exit(gameOn)
+    else:
+        print("There is no such option\nWrite 'help' to see list of commands")
+    return(gameOn)
+
+def exit(gameOn):
+    """Exit the game"""
+    gameOn=0
+    print("See you again")
+    return(gameOn)

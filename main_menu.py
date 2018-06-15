@@ -1,4 +1,5 @@
 import functions
+global main_menu
 main_menu = 1
 
 
@@ -37,12 +38,9 @@ def authors():
     Alicja Olejniczak\n
     Bartosz Zawadzki\n
     Klaudia Slawinska\n\n""")
-def exit():
-    """Exit the game"""
-    print("See you again")
-    
 
-def mainMenu():
+
+def mainMenu(gameOn):
     """Main part of Main Menu in game"""
     while(main_menu == 1):
         mainMenuText()
@@ -50,16 +48,19 @@ def mainMenu():
             newGameLoad()
             print("Started a new game")
             attributes["heroName"] = functions.create_new_hero()     #changes herName to chosen Name
+            gameOn=1
             break
         elif(choice == '2'):
             SavedGameLoad()
+            gameOn=1
             print("Loaded a saved game")
             break
         elif(choice == '3'):
             authors()
         elif(choice == '4'):
-            exit()
+            gameOn=functions.exit(gameOn)
             break
         else:
+            print("We don`t do that here\n")
             continue
-
+    return(gameOn)

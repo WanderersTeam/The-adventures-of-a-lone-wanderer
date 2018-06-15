@@ -1,5 +1,5 @@
-heroName = 'Ziutek'
-hp = 10
+heroName = 'Bartek'
+hp = 40
 exp = 0
 lvl = 1
 strength = 10

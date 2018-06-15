@@ -1,6 +1,6 @@
 import saved_game, functions, main_menu, weapons
 
-main_menu.SavedGameLoad()
+#main_menu.SavedGameLoad()
 
 def level1_start():
     print("""
@@ -32,11 +32,3 @@ def level1_start():
     while line <= 50:
         print(" ")
         line += 1
-  
-level1_start()
-attributes = main_menu.attributes
-functions.show_attributes(attributes)
-
-
-input("Stop")
-
